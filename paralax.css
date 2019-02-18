@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    background-color: #ffc0ab;
+    font-family: 'Coiny', cursive;
+
+}
+.trigger {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-left: 100px;
+}
+.title {
+  text-align: right;
+}
+#title {
+  position: fixed;
+  top: 20vh;
+  right: 10vw;
+  z-index: 100;
+  text-align: right;
+  font-size: 12vw;
+  color: #ff4c61;
+}
+#plane {
+  display: block;
+  position: absolute;
+  z-index: 999;
+  width: 250px;
+  height: 250px;
+  top: -150px; 
+  left: 110vw;
+  text-align: right;
+  font-size: 12vw;
+  color: #ff4c61;
+  background-image: url(paper-plane.svg);
+}
+#title>p{
+  font-size: 4vw;
+margin-top: -40px;
+padding-right: 12vw;
+color: #ff708a;
+
+}
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .parallax__group {
+    position: relative;
+    height: 200vh;
+    transform-style: preserve-3d;  
+  }
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .parallax__layer--base {
+    transform: translateZ(0);
+    color: red;
+  }
+  .parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+    z-index: -5;
+  }
+  .deep_bcg {
+    transform: translateZ(-2px) scale(3);
+    background: url(1.png);
+    background-repeat: no-repeat;
+    background-size:  auto 100vh;
+    height: 500vh;
+  }
+  .deep_bcg>.pins {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    width: 5vh;
+    height: 5vh;
+    background-color: white;
+    border-radius: 50%;
+    border: 7px solid #ff4c61;
+
+  }
+  #porto {
+    top: 100vh;
+    left: 65vh;
+  }
+  #porto::after {
+    font-size: 5vh;
+    content: "Porto";
+    position: absolute;
+    left: 6vh;
+    top: 0px;
+    color: white;
+  }

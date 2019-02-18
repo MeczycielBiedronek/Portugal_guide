@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+}
+.orange {
+    -webkit-animation-name: orange; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: orange;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.orange_bye {
+    -webkit-animation-name: orange_bye; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: orange_bye;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.bcgBig {
+    -webkit-animation-name: bcg_big; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: bcg_big;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.bcgSmall {
+    -webkit-animation-name: bcg_small; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: bcg_small;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes orange {
+    from {right: -320px;}
+    to {right: 320px;}
+}
+@keyframes orange_bye {
+    from {right: 320px;}
+    to {right: -320px;}
+}
+
+@keyframes bcg_big {
+    from {background-size: auto 100vh;}
+    to {background-size: auto 500vh;}
+}
+@keyframes bcg_small {
+    from {background-size: auto 500vh;}
+    to {background-size: auto 100vh;}
+}
+.planeIn{
+    -webkit-animation-name: plane_in; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: plane_in;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes plane_in {
+    0% {top: -150px; left: 110vw; width: 250px; height: 250px;}
+    60% {width: 450px; height: 450px;}
+    100% {  top: 100vh; left: 65vh; width: 50px; height: 50px;}
+}
