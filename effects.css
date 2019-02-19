@@ -59,3 +59,87 @@
     60% {width: 450px; height: 450px;}
     100% {  top: 100vh; left: 65vh; width: 50px; height: 50px;}
 }
+.truckGo {
+    -webkit-animation-name: truck_go; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+    animation-name: truck_go;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes truck_go {
+    0% { width: 0; height: 0;}
+    100% { width: 100vw; height: 241vh;}
+}
+@keyframes letShow{
+    0% { width: 0; height: 0;}
+    80% { width: 8vh; height: 8vh;}
+    100% { width: 5vh; height: 5vh;}
+}
+@keyframes letShowText{
+    0% { transform:rotate(-95deg)}
+    80% { transform:rotate(45deg)}
+    100% { transform:rotate(0deg)}
+}
+.truckGo2 {
+    -webkit-animation-name: truck_go2; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: truck_go2;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes truck_go2 {
+    0% { width: 90vw; height: 241vh;}
+    100% { width: 90vw; height: 329vh;}
+}
+.truckGo3 {
+    -webkit-animation-name: truck_go3; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: truck_go3;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes truck_go3 {
+    0% { width: 92vw; height: 329vh;}
+    100% { width: 92vw; height: 452vh;}
+}
+.truckGo4 {
+    -webkit-animation-name: truck_go4; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+    animation-name: truck_go4;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes truck_go4 {
+    0% { width: 92vw; height: 452vh;}
+    100% { width: 92vw; height: 690vh;}
+}
+.infoShow {
+    -webkit-animation-name: info_show; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: info_show;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes info_show {
+    from {left: 150vw;}
+    to {left: 45vw;}
+}
+.infoShowLeft {
+    -webkit-animation-name: info_show_left; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: info_show_left;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes info_show_left {
+    from {left: 150vw;}
+    to {left: 2vw;}
+}
+  

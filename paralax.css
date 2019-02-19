@@ -1,8 +1,33 @@
 body {
     margin: 0;
     background-color: #ffc0ab;
-    font-family: 'Coiny', cursive;
+    font-family: 'Laila', serif;
 
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: #ffc0ab; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: #ffc0ab;
+  background: #ffc0ab;
+}
+h1 {
+  float: left;
+  font-size: 4rem;
+  margin: 15px 10px 0 0;
+  line-height: 2rem;
+  font-family: 'Coiny', cursive;
+}
+p{
+  text-align: left;
+  line-height: 4rem;
 }
 .trigger {
   display: block;
@@ -21,6 +46,9 @@ body {
   text-align: right;
   font-size: 12vw;
   color: #ff4c61;
+  line-height: 12rem;
+  font-family: 'Coiny', cursive;
+
 }
 #plane {
   display: block;
@@ -35,11 +63,33 @@ body {
   color: #ff4c61;
   background-image: url(paper-plane.svg);
 }
+#bus {
+  display: block;
+  position: absolute;
+  z-index: 999;
+  background-image: url(bus.svg);
+}
 #title>p{
   font-size: 4vw;
 margin-top: -40px;
 padding-right: 12vw;
 color: #ff708a;
+}
+#track {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transform: translateZ(-2px) scale(3);
+}
+#group2 {
+  background-color: #ffc0ab;
+}
+#trg4 {
+  background-color: red;
+  position: absolute;
+  bottom: 35vh;
 
 }
 .parallax {
@@ -60,6 +110,76 @@ color: #ff708a;
     bottom: 0;
     left: 0;
   }
+  .hide {
+    visibility: hidden;
+  }
+  .visible {
+    visibility: visible;
+  }
+  .apend {
+    display: block;
+    position: absolute;
+    width: 40vw;
+    height: 40vh;
+    left: 60vw;
+  }
+  #apend1 {
+    background: url(appendixes/france.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:  auto 100%;
+  }  
+  #apend2 {
+    background: url(appendixes/tram.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:  auto 100%;
+  }
+  #apend3 {
+    background: url(appendixes/boat.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:  auto 100%;
+  }
+  #apend4 {
+    background: url(appendixes/kogut.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:  auto 100%;
+  }
+  #apend5 {
+    background: url(appendixes/git.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:  auto 100%;
+  }
+  #apend6 {
+    background: url(appendixes/port.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:  auto 100%;
+  }
+  #apend7 {
+    background: url(appendixes/pastel.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:  auto 100%;
+  }
+  #apend8 {
+    background: url(appendixes/bika.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:  auto 100%;
+  }
+  #apend9 {
+    background: url(appendixes/surf.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:  auto 100%;
+  }
+  .left {
+    left: 2vw;
+  }
   .parallax__layer--base {
     transform: translateZ(0);
     color: red;
@@ -76,7 +196,6 @@ color: #ff708a;
     height: 500vh;
   }
   .deep_bcg>.pins {
-    display: block;
     position: absolute;
     z-index: 999;
     width: 5vh;
@@ -84,11 +203,104 @@ color: #ff708a;
     background-color: white;
     border-radius: 50%;
     border: 7px solid #ff4c61;
-
+    -webkit-animation-name: letShow; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: letShow;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    font-family: 'Coiny', cursive;
+  }
+  .pins::after{
+    -webkit-animation-name: letShowText; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: letShowText;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
   }
   #porto {
     top: 100vh;
     left: 65vh;
+    display: block;
+  }
+ .coimbra {
+    top: 189vh;
+    left: 80vh;
+    display: none;
+  }
+  .coimbra:after {
+    font-size: 5vh;
+    content: "Coimbra";
+    position: absolute;
+    left: 6vh;
+    top: 0px;
+    color: white;
+  }
+  .nazare {
+    top: 248vh;
+    left: 34vh;
+    display: none;
+  }
+  .nazare:after {
+    font-size: 5vh;
+    content: "Nazaré";
+    position: absolute;
+    left: 6vh;
+    top: 0px;
+    color: white;
+  }
+    .lisbon {
+    top: 330vh;
+    left: 23vh;
+    display: none;
+  }
+  .lisbon:after {
+    font-size: 5vh;
+    content: "Lisbon";
+    position: absolute;
+    left: 6vh;
+    top: 0px;
+    color: white;
+  }    
+  .sintra {
+    top: 323vh;
+    left: 10vh;
+    display: none;
+  }
+  .sintra:after {
+    font-size: 5vh;
+    content: "Sintra";
+    position: absolute;
+    left: 6vh;
+    top: 0px;
+    color: white;
+  }  
+  .lagos {
+    top: 481vh;
+    left: 59vh;
+    display: none;
+  }
+  .lagos:after {
+    font-size: 5vh;
+    content: "Lagos";
+    position: absolute;
+    left: 6vh;
+    top: 0px;
+    color: white;
+  }  
+  .sagres {
+    top: 486vh;
+    left: 43vh;
+    display: none;
+  }
+  .sagres:after {
+    font-size: 5vh;
+    content: "Sagres";
+    position: absolute;
+    left: 6vh;
+    top: 0px;
+    color: white;
   }
   #porto::after {
     font-size: 5vh;
@@ -97,4 +309,42 @@ color: #ff708a;
     left: 6vh;
     top: 0px;
     color: white;
+  }
+  .cityInfo {
+    display: block;
+    width: 30vw;
+    height: 40vh;
+    left: 150vw;
+    background-color: white;
+    border: 6px solid #ffc0ab;
+    position: absolute;
+    border-radius: 15px;
+    padding: 30px 5px 10px 10px;
+    line-height: 1.4rem;
+    overflow-y: scroll;
+    z-index: 9999;
+    color: #ff9538;
+  }
+  .cityPorto {
+    top: 112vh;
+  }
+  .cityCoimbra {
+    top: 178vh;
+  }
+  .cityNazare {
+    top: 233vh;
+  }
+  .cityLisbon {
+    top: 337vh;
+    height: 70vh;
+  }
+  .citySintra {
+    top: 278vh;
+  }
+  .cityLagos {
+    top: 435vh;
+  }
+  .show {
+    display: block;
+
   }
