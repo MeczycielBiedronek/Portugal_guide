@@ -128,7 +128,7 @@
 }
 @keyframes info_show {
     from {left: 150vw;}
-    to {left: 45vw;}
+    to {left: 55vw;}
 }
 .infoShowLeft {
     -webkit-animation-name: info_show_left; /* Safari 4.0 - 8.0 */
